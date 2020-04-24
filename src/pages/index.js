@@ -16,6 +16,10 @@ const HomePage = props => {
           node {
             frontmatter {
               shortDesc
+              desc
+              problem
+              outcome
+              whatWeDid
               tag
               title
             }

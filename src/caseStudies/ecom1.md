@@ -1,7 +1,7 @@
 ---
 title: "ecom1"
 tag: "ecom"
-desc: "Help large financial organisation to outsource their AEM development activity offshore with a dedicated team1"
+desc: "ecom Help large financial organisation to outsource their AEM development activity offshore with a dedicated team1"
 shortDesc: "Help large financial organisation to outsource their AEM development."
 link: "aem1"
 problem: "Company had planned for an aggressive roll out of AEM services beyond the existing resource capacity."
