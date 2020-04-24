@@ -1,7 +1,7 @@
 ---
 title: "aem2"
 tag: "aem"
-desc: "Help large financial organisation to outsource their AEM development activity offshore with a dedicated team1"
+desc: "Help large financial organisation to outsource their AEM development activity offshore with a dedicated team2"
 shortDesc: "Help large financial organisation to outsource their AEM development2."
 link: "aem1"
 problem: "Company had planned for an aggressive roll out of AEM services beyond the existing resource capacity."
