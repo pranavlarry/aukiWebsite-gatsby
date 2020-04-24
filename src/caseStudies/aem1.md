@@ -1,8 +1,8 @@
 ---
-title: "fend1"
-tag: "fend"
+title: "Adobe Experience Cloud"
+tag: "aem"
 desc: "Help large financial organisation to outsource their AEM development activity offshore with a dedicated team1"
-shortDesc: "Help large financial organisation to outsource their AEM development."
+shortDesc: "Help large financial organisation to outsource their AEM development1."
 link: "aem1"
 problem: "Company had planned for an aggressive roll out of AEM services beyond the existing resource capacity."
 outcome: "Faster go live and the company could launch multiple services with the same number of onroll AEM team."

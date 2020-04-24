@@ -1,0 +1,83 @@
+@import '../../font-size/font-size.scss';
+
+.service-caseStudy {
+    .carousel{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%);
+    }
+
+    .service-case.even {
+        color: white;
+    } 
+    .service-case-container{
+        font-family: "AvenirNextLTCom-Regular";
+        padding: 27% 12% 27% 12%;
+    }
+
+    .service-case-text{
+        padding-bottom: 60px;
+    }
+
+    .service-case-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .service-case-link span {
+        display: block;
+    }
+    .carousel,.carousel div:not(.service-case-container){
+        height: 100%;
+    }
+
+    .slick-arrow {
+        top: 80%;
+    }
+}
+
+.service-caseStudy {
+    @media (min-width: 1920px) {
+        .service-case-container{
+            font-size: $highDesk16;
+        }
+    }
+
+    @media (min-width: 1366px) and (max-width: 1920px){
+        .service-case-container{
+            font-size: $desk16;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 1365px) {
+        .service-case-container{
+            font-size: $lowDesk16;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .service-case-container{
+            font-size: $mob16;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 1225px) {
+    .service-caseStudy {
+        .carousel{
+            background:  linear-gradient(90deg, rgba(255,255,255,1) 93%, rgba(0,0,0,1) 93%);
+        }
+
+        .service-case-container{
+            padding: 95px 25px;
+            max-width: 75%;
+            margin: auto;
+        }
+
+        .slick-next {
+            right: 50px;
+        }
+    }
+
+}

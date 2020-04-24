@@ -1,0 +1,142 @@
+@import '../../font-size/font-size.scss';
+.caseSlide {
+
+    &-title {
+        padding-bottom: 60px;
+        font-family: "AvenirNextLTCom-Demi";
+        text-align: center;
+    }
+    .case-slide-container {
+        width: fit-content;
+        max-width: 1920px;
+        max-height: 560px;
+    }
+    
+    .case-slide{
+        display: flex;
+        flex-direction: column;
+        max-height: 560px;
+    }
+    
+    .case-slideStudy {
+        height: 435px;
+    }
+    
+    .case-slide.even {
+        background-color: #080a1f;
+        color: #ffffff;
+    }
+    .case-slide.odd {
+        background-color: #ebebeb;
+    }
+    
+    .case-slide-container {
+        // padding: 35px 50px 10px 50px;
+        padding: 8% 11% 2.5% 11%;
+        font-family: "AvenirNextLTCom-Regular";
+    }
+    
+    
+    .case-slide-img {
+        align-self: center;
+    }
+    
+    .case-slide-text {
+        max-width: 20em;
+        line-height: 1.3em;
+    }
+    
+    .case-slide-link {
+        text-decoration: none;
+        color: inherit;
+        padding-top: 25px;
+        display: block;
+    }
+    
+    .case-slide-link-char {
+        display: block;
+        font-size: 20px;
+        margin-bottom: -10px;
+    }
+    
+    .case-slide-title {
+        font-family: "AvenirNextLTCom-Demi";
+        line-height: 1.3em;
+    }
+    
+    .case-slideStudy .slick-arrow {
+        top: 50%;
+    }
+    
+    .case-slideStudy .slick-prev {
+        left: 30px;
+    }
+    
+    .case-slideStudy .slick-next {
+        right: 30px;
+    }
+    
+    .carousel,.carousel-slides {
+        height: 100%;
+    }
+    
+    @media (min-width: 1921px) {
+        .caseSlide-title {
+            font-size: $highDesk60;
+        }
+        .case-slide-title { 
+            font-size: $highDesk30;
+        }
+
+        .case-slide-text,.case-slide-link {
+            font-size: $highDesk16;
+        }
+    }
+    
+    @media (min-width: 1366px) and( max-width:1920px) {
+        .caseSlide-title {
+            font-size: $desk60;
+        }
+        .case-slide {
+            height: calc( 450vw / 13.66);
+        }
+    
+        .case-slide-title { 
+            font-size: $desk30;
+        }
+
+        .case-slide-text,.case-slide-link {
+            font-size: $desk16;
+        }
+        
+    }
+    
+    @media (min-width: 768px) and (max-width: 1365px) {
+        .caseSlide-title {
+            font-size: $lowDesk60;
+        }
+        .case-slide-title { 
+            font-size: $lowDesk30;
+        }
+
+        .case-slide-text,.case-slide-link {
+            font-size: $lowDesk16;
+        }
+    }  
+    
+    @media (max-width: 767px) {
+        .caseSlide-title {
+            font-size: $mob60;
+            padding-bottom: 30px;
+            padding-top: 50px;
+        }
+        .case-slide-title { 
+            font-size: $mob30;
+        }
+
+        .case-slide-text,.case-slide-link {
+            font-size: $mob16;
+        }
+    
+    }
+}

@@ -1,0 +1,176 @@
+@import '../../font-size/font-size.scss';
+
+.caseExpand {
+    display: flex;
+    overflow: hidden;
+
+    &-close {
+        display: none;
+    }
+    &-Ctitle {
+        width: 50%;
+        background-color: #f2eeef;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-repeat: no-repeat;
+        background-position: right 25%;
+        background-size: 32%;
+        &-title {
+            font-family: "AvenirNextLTCom-Demi";
+            max-width: 65%;
+            margin-left: 35px;
+            padding: 0 50px;
+        }
+
+        &-subtitle {
+            font-family: "AvenirNextLTCom-Regular";
+            margin-left: 35px;
+            padding: 0 50px;
+        
+        }
+
+        &-logo {
+            display: flex;
+            max-width: 130px;
+            p {
+                padding: 10px;
+            }
+        }
+    }
+
+    &-Cdesc {
+        width: 50%;
+        padding: 4em 4em 2em 2em;
+        // font-size: $desk16;
+        &-list {
+            list-style-type: none;
+            padding-bottom: 5%;
+        }
+
+        &-item {
+            padding-bottom: 2em;
+            padding-right: 20px;
+        }
+
+        &-heading::before {
+            content:'\21C0';
+            margin-left: -30px;
+            margin-right: 10px;
+            font-size: 30px;
+        }
+
+        &-heading {
+            font-family: "AvenirNextLTCom-Demi";
+            padding-bottom: .5em;
+        }
+
+        &-para {
+            font-family: "AvenirNextLTCom-Regular";
+            font-size: 1em;
+        }
+
+        &-hello {
+            background-color: #5044fc;
+            border: none;
+            color: #ffffff;
+            padding: 16px 45px;
+            margin: 2% 6%;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .caseExpand {
+        &-Ctitle-title,&-Cdesc-heading {
+            font-size: $highDesk30;
+        }
+        &-Cdesc {
+            font-size: $highDesk16;
+        }
+    }
+    
+}
+
+@media (min-width: 1366px) and (max-width: 1920px) {
+    .caseExpand {
+        &-Ctitle-title,&-Cdesc-heading {
+            font-size: $desk30;
+        }
+
+        &-Cdesc {
+            font-size: $desk16;
+        }
+    }
+}
+@media (max-width:1250px) and (min-width:768px) {
+    .caseExpand {
+        &-Ctitle {
+            background-position: right 60%;
+            background-size: 36%;
+        }
+    }
+}
+@media (max-width: 1365px) {
+    .caseExpand {
+        &-Ctitle-title,&-Cdesc-heading {
+            font-size: $lowDesk30;
+        }
+
+        &-Cdesc {
+            font-size: $lowDesk16;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .caseExpand {
+        background-repeat: no-repeat;
+        background-position: right 30%;
+        background-size: 175px;
+        flex-direction: column;
+        background-color: #f2eeef;
+
+        &-close {
+            display: block;
+            text-align: right;
+            text-decoration: none;
+            color: #000000;
+            padding: 15px 20px;
+        }
+        &-Ctitle {
+            width: 100%;
+            background: transparent;
+            &-subtitle {
+                padding: 0 10px;
+            }
+        }
+        &-Ctitle-title {
+            font-size: $mob30;
+            padding: 10px 0;
+            max-width: 100%;
+        }
+
+        &-Cdesc-heading{
+            font-size: 23px;
+        }
+
+        &-Cdesc {
+            font-size: $mob16;
+        }
+
+        &-Cdesc {
+            width: 100%;
+
+            &-list {
+                padding-right: 35px;
+            }
+
+            &-hello {
+                display: none;
+            }
+        }
+    }
+}

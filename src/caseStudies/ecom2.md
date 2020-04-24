@@ -1,6 +1,6 @@
 ---
-title: "fend1"
-tag: "fend"
+title: "ecom2"
+tag: "ecom"
 desc: "Help large financial organisation to outsource their AEM development activity offshore with a dedicated team1"
 shortDesc: "Help large financial organisation to outsource their AEM development."
 link: "aem1"
