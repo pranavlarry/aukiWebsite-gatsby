@@ -1,0 +1,38 @@
+.weareauki__container {
+  height: 100vh;
+  background: #080a1f;
+  text-align: center;
+}
+
+.weareauki__container h1, .weareauki__container span {
+  margin: 0px;
+  color: white;
+}
+
+.weareauki__container p {
+  color: #98989a;
+}
+
+.weareauki__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.weareauki__content-formula p {
+  margin-bottom: 9px;
+}
+
+.weareauki__content-formula-downarrow {
+  width: 20px;
+  fill: #98989a;
+}
+/*# sourceMappingURL=weareauki.css.map */

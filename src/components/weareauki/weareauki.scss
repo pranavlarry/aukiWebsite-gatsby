@@ -1,0 +1,92 @@
+.weareauki {
+  &__container {
+    height: 82vh;
+    background: #080a1f;
+    text-align: center;
+    h1,
+    span {
+      margin: 0px;
+      color: white;
+    }
+    p {
+      color: #999999;
+    }
+  }
+  &__services {
+    font-size: calc(30vw / 13.66);
+    font-family: AvenirNextLTCom-Regular;
+    color: white;
+  }
+
+  &__content {
+    h1 {
+      font-size: calc(80vw / 13.66);
+      font-family: AvenirNextLTCom-Demi;
+    }
+    p {
+      font-size: calc(30vw / 13.66);
+      font-family: AvenirNextLTCom-Regular;
+      line-height: 108%;
+      margin-bottom: 0px;
+    }
+    &-wrapper {
+      display: flex;
+      height: 90%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    &-formula {
+      p {
+        margin-bottom: 9px;
+        font-size: calc(16vw / 13.66);
+        font-family: AvenirNextLTCom-Regular;
+      }
+      &-downarrow {
+        width: 20px;
+        fill: #98989a;
+      }
+    }
+  }
+}
+@media (max-width: 1365px) {
+  .weareauki {
+    &__content {
+      h1 {
+        font-size: calc(368.75% + 22 * (100vw - 480px) / 886);
+      }
+      p {
+        font-size: calc(156.25% + 5 * (100vw - 480px) / 886);
+      }
+      &-formula{
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+    &__services {
+      font-size: calc(156.25% + 5 * (100vw - 480px) / 886);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .weareauki {
+    &__br {
+      display: none;
+    }
+    &__content {
+      padding-left: 6.3%;
+      padding-right: 6.3%;
+      padding-bottom: 14.6%;
+
+      &-wrapper {
+        height: 63.63%;
+        align-items: flex-end;
+      }
+      &-formula {
+        display: none;
+      }
+    }
+  }
+}

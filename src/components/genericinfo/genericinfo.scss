@@ -1,0 +1,118 @@
+@import '../../font-size/font-size.scss';
+
+.genericinfo {
+    width: 100%;
+    height: calc(498vw / 13.66);
+    margin-left: calc(15vw / 13.66);
+    margin-right: calc(15vw / 13.66);
+    //align-items: center;
+
+    &__wrapper {
+        //padding: 87px 22px 87px 22px;
+        padding-left: calc(22vw / 13.66);
+        padding-right: calc(22vw / 13.66);
+        padding-top: calc(87vw / 13.66);
+        padding-bottom: calc(87vw / 13.66);
+        justify-content: center;
+        h4 {
+            font-family: "AvenirNextLTCom-Demi";
+            font-size: $desk60;
+        }
+
+        #full-tech-implementation {
+            background: #fce8e9;
+            color: #080a1f;
+            a {
+                color: #080a1f;
+                text-decoration: none;
+            }
+        }
+
+        #hire-talent {
+            background: #080a1f;
+            color: white;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+    &__content {
+        font-family: AvenirNextLTCom-Regular;
+        font-size: $desk16;
+        height: calc(219vw / 13.66);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-wrapper {
+            padding-left: 14.3%;
+            padding-right: 14.3%;
+        }
+
+        &-title {
+            height: calc(170vw / 13.66);
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 33px;
+            h4 {
+                margin-bottom: -6px;
+                line-height: 57px;
+            }
+        }
+        &-main {
+            margin-bottom: 27px;
+        }
+    }
+}
+@media (max-width: 1365px) {
+    .genericinfo {
+        margin: 0px 15px 0px 15px;
+        width: 100%;
+        height: 498px;
+        &__wrapper {
+            padding: 87px 22px 87px 22px;
+            h4 {
+                font-size: $lowDesk60;
+            }
+        }
+        &__content {
+            font-size: $lowDesk16;
+            &-title {
+                height: 170px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .genericinfo {
+        margin: 0px 22px 0px 22px;
+        max-width: 895px;
+        height: 700px;
+        &__wrapper {
+            padding: 123px 31px 123px 31px;
+            h4 {
+                font-size: $highDesk60;
+                line-height: 80px;
+            }
+        }
+        &__content {
+            height: 308px;
+            font-size: $highDesk16;
+            &-title {
+                height: 239px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .genericinfo {
+        &__container {
+            display: none;
+        }
+    }
+}

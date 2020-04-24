@@ -1,0 +1,269 @@
+// .up{
+//   transition: all 0.5s ease;
+// }
+.is-fixed {
+  @media(min-width: 768px){
+     height: 15%;
+
+    .navbar-brand {
+      margin: 2% 0;
+    }
+  }
+
+}
+.navbar {
+    background-color: #080a1f;
+    width: 100%;
+    display: flex;
+    font-family: "AvenirNextLTCom-Regular";
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    &-auki {
+      color: #ffffff;
+      font-size: 25px;
+      font-weight: 600;
+      font-weight: 100;
+      letter-spacing: 5px;
+      padding: 10px 20px;
+    }
+
+    &-logoImg {
+      min-width: 80px;
+      width: (80vw / 13.66);
+      max-width: 135px;
+    }
+
+    &-pioneer{
+      color: #666666;
+      font-weight: 600;
+      padding-left: 6px;
+      width: calc(200vw/13.66);
+      min-width: 180px;
+    }
+
+    &-brand {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0px 10px 0 5%;
+      border-right: 1px solid #ffffff;
+      margin: 3% 0;
+      width: fit-content;
+  
+    }
+
+    &-list {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 25px;
+    }
+
+    &-logo {
+      display: flex;
+    }
+
+    &-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      &.active {
+        color: #5044fc;
+      }
+    }
+
+}
+.menu.btn1 {
+    display: none;
+}
+@media(min-width: 768px) {
+  .navbar-menu {
+    display: flex !important;
+  }
+}
+@media (min-width: 1366px) {
+  .navbar {
+    a {
+      font-size: calc(14vw / 13.66);
+    }
+
+    &-pioneer {
+      font-size: calc(16.73vw / 13.66);
+    }
+
+    &-auki {
+      font-size: calc(25vw / 13.66);
+
+    }
+  }
+}
+
+@media(min-width:768px) and (max-width: 1366px) {
+  .navbar {
+    a {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 767px) {
+    .menu.btn1 {
+        display: block;
+    }  
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-menu {
+        text-align: center;
+        display: none;
+    }
+
+    .navbar-list{
+        padding: 20px 25px;
+        height: 145px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+      border: none;
+    }
+
+    .navbar-pioneer {
+        color: #ffffff;
+        font-weight: 300;
+    }
+}
+
+
+
+
+@mixin btn($right, $top) {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: $top;
+  right: $right;
+  transition-duration: 0.5s;
+}
+
+@mixin icon($height, $width) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: 30px;
+  background-color: #ffffff;
+}
+
+@mixin icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: #ffffff;
+  content: "";
+  top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: #ffffff;
+  content: "";
+  top: $top;
+}
+
+@mixin  border-left-radius() {
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+}
+
+@mixin border-right-radius() {
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+
+
+
+.btn1{
+  @include btn(35px, 30px);
+  
+  .icon-left {
+    @include icon(4px, 16px);
+    left: 15px; 
+    @include border-left-radius();
+    
+    &:before{
+      @include icon-before(4px, 16px, -15px);
+      @include border-left-radius();
+    }
+    
+    &:after{
+      @include icon-after(4px, 16px, 15px);
+      @include border-left-radius();
+    }
+    
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  
+  .icon-right {
+    @include icon(4px, 10px);
+    left: 30px;
+    @include border-right-radius();
+    
+    &:before{
+      @include icon-before(4px, 16px, -15px);
+      @include border-right-radius();
+
+    }
+    
+    &:after{
+      @include icon-after(4px, 16px, 15px);
+      @include border-right-radius();
+
+    }
+  }
+  
+  &.open {
+    .icon-left {
+      transition-duration: 0.5s;
+      background: transparent;
+      
+      &:before{
+        transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+      }
+
+      &:after{
+        transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+      }
+    }
+    
+    .icon-right {
+      transition-duration: 0.5s;
+      background: transparent;  
+      
+      &:before{
+        transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+      }
+
+      &:after{
+        transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+

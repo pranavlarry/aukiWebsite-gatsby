@@ -1,0 +1,114 @@
+@import '../../font-size/font-size.scss';
+
+.hello-title {
+    font-family: "AvenirNextLTCom-Demi";
+    text-align: center;
+}
+
+.hello-main-container {
+    padding-top: 80px;
+}
+
+.hello-container {
+    display: flex;
+    max-width: 1920px; //remove
+    margin: auto;
+    font-family: "AvenirNextLTCom-Regular";
+    padding: 35px 15px;
+    max-height: 970px;
+    justify-content: center;
+}
+
+.hello-desc {
+    font-weight: 900;
+    max-width: 858px;
+}
+
+.hello-form-container {
+    padding-left: 35px;
+    width: 50%;
+}
+
+
+.hello-guy {
+    width: calc(530vw/13.66);
+    height: calc(630vw/13.66);
+    max-width: 630px;
+}
+
+.form-thankYou{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #ebebeb;
+    
+    &-close {
+        width: 65px;
+        background: none;
+        border: none;
+    }
+
+    &-msg {
+        padding-bottom: 40px;
+    }
+
+    span {
+        color:#4f43fd;
+    }
+}
+
+@media (min-width:1920px) {
+    .hello-desc {
+        font-size: 42px;
+    }  
+
+    .hello-title{
+        font-size: 85px
+    }
+}
+
+@media(min-width:1366px) {
+    .hello-title{
+        font-size: $desk60;
+    }
+}
+
+@media (min-width: 823px) and (max-width: 1920px) {
+    .hello-desc {
+        font-size: $desk30;
+        width: (610vw/13.66);
+    }
+}
+
+@media (max-width: 950px) {
+    .hello-container{
+        padding: 20px 15px;
+    }
+
+    .hello-main-container {
+        padding-top: 60px;
+    }
+
+    .hello-title{
+        font-size: 50px;
+    }
+
+    .hello-guy {
+        display: none;
+    }
+    .hello-form-container {
+        width: 90%;
+        text-align: center;
+    }
+
+    .hello-desc {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .hello-form-container {
+        padding: 0;
+    }
+}

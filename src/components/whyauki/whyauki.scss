@@ -1,0 +1,182 @@
+@import "../../font-size/font-size.scss";
+
+.whyauki {
+    font-family: AvenirNextLTCom-Demi;
+    font-size: $desk60;
+    color: black;
+    margin-bottom: calc(34vw / 13.66);
+    &__container {
+        padding-top: calc(3vw / 13.66);
+        padding-bottom: calc(90vw / 13.66);
+        padding-left: calc(142vw / 13.66);
+        padding-right: calc(137vw / 13.66);
+    }
+    &__description-selected {
+        color: black;
+    }
+    &__titles {
+        width: 70%;
+        padding-left: calc(38vw / 13.66);
+        padding-right: calc(162vw / 13.66);
+        padding-top: calc(62vw / 13.66);
+        padding-bottom: calc(62vw / 13.66);
+        color: #666666;
+
+        div:nth-child(4) {
+            p {
+                margin-bottom: 0px;
+            }
+        }
+        h5 {
+            font-family: "AvenirNextLTCom-Demi";
+            display: flex;
+            font-size: $desk30;
+            margin-bottom: calc(10vw / 13.66);
+            margin-top: calc(-7vw / 13.66);
+            transition:  ease-out 0.5s;
+            cursor: pointer;
+            .whyauki-title {
+                order: 1;
+            }
+
+            .whyauki-title-arrow {
+                order: 2;
+                color: #666666;
+                transition: ease-in 0.5s;
+            }
+        }
+        p {
+            font-family: "AvenirNextLTCom-Regular";
+            font-size: $desk16;
+            margin-top: calc(-5vw / 13.66);
+            margin-bottom: calc(25vw / 13.66);
+        }
+
+        .selected {
+            color: #5044fc;
+        }
+
+        h5:hover {
+            color: #5044fc;
+            transform: scale(1.03);
+            transition: ease-in 0.5s;
+            .whyauki-title-arrow {
+                transform: translateX(15px);
+                transition: ease-in 0.5s;
+            }
+        }
+    }
+
+    &__content {
+        padding-left: calc(35vw / 13.66);
+        width: 50%;
+        padding-top: calc(62vw / 13.66);
+        line-height: calc(40vw / 13.66);
+        //line-height: 126%;
+        padding-bottom: calc(62vw / 13.66);
+        padding-right: calc(43vw / 13.66);
+        border-left: 1px solid #666666;
+        color: black;
+        //font-size: 30px;
+        font-size: $desk30;
+        font-family: AvenirNextLTCom-Demi;
+        p {
+            margin-bottom: 0px;
+        }
+    }
+}
+@media (min-width: 1920px) {
+    .whyauki {
+        font-size: $highDesk60;
+        margin-bottom: 48px;
+        &__titles {
+            padding-left: 54px;
+            padding-right: 220px;
+            padding-top: 88px;
+            padding-bottom: 88px;
+            h5 {
+                font-size: $highDesk30;
+                margin-bottom: 15px;
+                margin-top: -10px;
+            }
+            p {
+                font-size: 23px;
+                margin-top: -7px;
+                margin-bottom: 36px;
+            }
+        }
+        &__content {
+            font-size: $highDesk30;
+            padding-bottom: 88px;
+            padding-left: 50px;
+            padding-right: 61px;
+            padding-top: 88px;
+            line-height: 57px;
+        }
+        &__container {
+            padding-top: 5px;
+            padding-right: 193px;
+            padding-left: 200px;
+            padding-bottom: 127px;
+        }
+    }
+}
+@media (max-width: 1365px) {
+    .whyauki {
+        font-size: $lowDesk60;
+        //margin-bottom: 34px;
+
+        &__titles {
+            h5 {
+                font-size: $lowDesk30;
+            }
+            p {
+                font-size: $lowDesk16;
+            }
+        }
+
+        &__content {
+            font-size: $lowDesk30;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .whyauki {
+        font-size: $mob60;
+        margin-bottom: 40px;
+        &__container {
+            padding-left: 9.4%;
+            padding-right: 9.4%;
+            padding-bottom: 0px;
+        }
+        &__content {
+            display: none;
+        }
+        &__titles {
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 100%;
+            p {
+                font-size: 18px;
+                margin-bottom: 30px;
+                margin-left: 25px;
+            }
+            h5 {
+                font-size: $mob30;
+                color: #000000;
+                font-family: "AvenirNextLTCom-Regular";
+                font-weight: 300;
+                .whyauki-title {
+                    order: 2;
+                }
+                .whyauki-title-arrow {
+                    order: 1;
+                }
+            }
+
+            .selected {
+                color: #000000;
+            }
+        }
+    }
+}

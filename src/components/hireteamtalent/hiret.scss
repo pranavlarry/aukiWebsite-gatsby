@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+    .hire {
+        &__container {
+            display: none;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .hire {
+        &__container {
+            display: block;
+            background: #f2f2f2;
+            padding-left: 4%;
+            padding-right: 4%;
+            height: 36.36%;
+        }
+        &__content {
+            &-wrapper {
+                text-align: left;
+                padding-left: 5.7%;
+                padding-right: 5.7%;
+                padding-top: 4.3%;
+                padding-bottom: 4.3%;
+                h2 {
+                    font-family: AvenirNextLTCom-Regular;
+                    font-size: 28px;
+                    color: black;
+                    margin-bottom: 2px;
+                }
+                p {
+                    font-family: AvenirNextLTCom-Regular;
+                    font-size: 18px;
+                    color: black;
+                    margin-bottom: 17px;
+                }
+            }
+        }
+    }
+}

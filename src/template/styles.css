@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "AvenirNextLTCom-Demi";
+    src: url('../assets/fonts/AvenirNextLTCom-Demi.ttf') format("truetype");
+  }
+
+@font-face {
+    font-family: "AvenirNextLTCom-Regular";
+    src: url('../assets/fonts/AvenirNextLTCom-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "poppins-regular";
+    src: url('../assets/fonts/Poppins-Regular.ttf') format("truetype");
+}
+
+p,h1,h4,h2,body,html {
+  margin: 0;
+}
+
+/* temp */
+
+.hello-container{
+  max-width: 1500px;
+}
+
+body {  
+  font-family: "AvenirNextLTCom-Regular";
+}
+
+.transilate {
+  transition: .5s ease;
+}
+
+.d-flex {
+  display: flex;
+}

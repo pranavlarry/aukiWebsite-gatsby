@@ -1,0 +1,15 @@
+//60
+$desk60: calc(60vw/13.66);
+$highDesk60 : 85px;
+$lowDesk60 : calc(175% + 32 * (100vw - 480px) / 886);
+$mob60: 40px;
+//30
+$desk30: calc(30vw/13.66);
+$highDesk30 : 43px;
+$lowDesk30 : calc(138% + 8 * (100vw - 768px) / 598);
+$mob30: 28px;
+//16
+$desk16: calc(16vw/13.66);
+$highDesk16 : 23px;
+$lowDesk16 : 14px;
+$mob16: 16px;
