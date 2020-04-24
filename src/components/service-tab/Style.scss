@@ -1,0 +1,444 @@
+@import "../../font-size/font-size.scss";
+.services {
+  &-indicator {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-family: "AvenirNextLTCom-Demi";
+    font-size: $desk30;
+
+    &-list {
+      font-size: 1em;
+      cursor: pointer;
+
+      &:hover span {
+        position: relative;
+        animation: moveRight 1s infinite;
+      }
+    }
+
+    @keyframes moveRight {
+      0% {
+        right: 0px;
+      }
+      50% {
+        right: -10px;
+      }
+      100% {
+        right: 0px;
+      }
+    }
+
+    &-list.selected {
+      color: #5044fc;
+    }
+  }
+
+  &-tab {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: calc(16vw / 13.66);
+    height: 28.125em;
+
+    &-scope {
+      font-size: $desk16;
+      width: 31.875em;
+      display: flex;
+      justify-content: center;
+      background-color: #f2f2f2;
+
+      &-expertise {
+        color: #7b72f9;
+      }
+
+      &-desc {
+        padding-bottom: 3.12em;
+        line-height: 1.3em;
+      }
+
+      &-container {
+        max-width: 21.875em;
+        // padding: 5em 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &-products {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 11em;
+
+        p {
+          padding: 5px;
+        }
+      }
+    }
+
+    &-logo {
+      padding: 0 20px;
+      &-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+      }
+
+      &.open {
+        background: linear-gradient(
+          90deg,
+          #ffffff 73%,
+          #f2f2f2 73%,
+          #f2f2f2 87%,
+          #000000 85%
+        );
+        // background: linear-gradient(90deg, #fff 20em, #f2f2f2 5em, #f2f2f2 23.4em, #000 1em);
+      }
+
+      &-title {
+        .auki-services-title {
+          font-size: 4.5vw;
+          font-family: "AvenirNextLTCom-Demi";
+          max-width: 5.5em;
+          line-height: 1em;
+
+          &.fend {
+            position: relative;
+            left: -36px;
+            font-size: 4vw;
+          }
+        }
+
+        &.open {
+          animation: scaleTo 1s ease forwards;
+          position: relative;
+        }
+      }
+
+      @keyframes scaleTo {
+        100% {
+          transform: scale(0.6);
+        }
+        from {
+          top: 10px;
+          left: -10px;
+        }
+        to {
+          top: -125px;
+        }
+      }
+    }
+
+    &-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.scope {
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      &-list {
+        list-style-type: none;
+        font-size: $desk16;
+        max-width: 10.25em;
+        padding: 0 3.9em;
+      }
+
+      &-item {
+        padding: 1em 0;
+        cursor: pointer;
+
+        &:hover::before {
+          content: "\21BC";
+          position: relative;
+          animation: moveLeft 1s infinite;
+        }
+      }
+
+      @keyframes moveLeft {
+        0% {
+          left: 0px;
+        }
+        50% {
+          left: -15px;
+        }
+        100% {
+          left: 0px;
+        }
+      }
+
+      &-item::before {
+        content: "\21C0";
+        margin-left: -20px;
+        margin-right: 10px;
+        font-size: 20px;
+        color: inherit;
+      }
+
+      &-item.first::before {
+        content: "";
+      }
+
+      &-item.selected::before {
+        content: "\21BC";
+        color: inherit;
+      }
+
+      &-item.first {
+        margin-top: -2em;
+        padding: 1.5em 0;
+        color: #5044fc;
+      }
+    }
+
+    &-arrow {
+      display: flex;
+      align-items: center;
+
+      &-sym {
+        cursor: pointer;
+        background-color: #7f7c79;
+        color: #ffffff;
+        padding: 16px;
+        border-radius: 25px;
+        margin: 20px;
+      }
+    }
+
+    &-open {
+      width: 43.125em;
+    }
+
+    &-full {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(90deg, white 93%, black 93%);
+
+      &-desc {
+        font-size: $desk16;
+        max-width: 30em;
+        padding: 2em;
+        line-height: 1.3em;
+        padding-top: 4em;
+      }
+
+      &-heading {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-hire {
+      display: flex;
+
+      &-heading {
+        font-size: 1.5rem;
+      }
+
+      &-desc {
+        padding: 2em;
+        padding-top: 4em;
+        line-height: 1.3em;
+      }
+
+      &-tab {
+        width: 50%;
+      }
+
+      &-tab.even {
+        background-color: #000000;
+        color: #ffffff;
+      }
+    }
+
+    // &-caseStudy {
+    // }
+  }
+}
+
+.open-display-none {
+  display: none;
+}
+
+@media (max-width: 1365px) {
+  .services {
+    &-indicator {
+      font-size: $lowDesk30;
+    }
+
+    &-tab {
+      font-size: $lowDesk16;
+      &-scope,
+      &-menu-list {
+        font-size: $lowDesk16;
+      }
+
+      &-full {
+        &-desc {
+          font-size: $lowDesk16;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1125px) {
+  .services {
+    &-tab-hire {
+      display: block;
+      background: linear-gradient(90deg, white 93%, black 93%);
+
+      &-tab {
+        width: 100%;
+        background-color: transparent;
+      }
+
+      &-tab.even {
+        background-color: transparent;
+        color: #000000;
+      }
+
+      &-desc {
+        padding: 1em 2em;
+        padding-right: 4em;
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px) and (min-width: 768px) {
+  .services {
+    &-tab-arrow {
+      &-sym {
+        position: absolute;
+        bottom: 10px;
+        margin: 0;
+      }
+
+      &-sym.right {
+        right: 20px;
+      }
+
+      &-sym.left {
+        left: 20px;
+      }
+    }
+  }
+}
+
+.in-right {
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-delay: 0.5s;
+}
+
+@media (max-width: 767px) {
+  .services {
+    &-indicator {
+      flex-direction: column;
+      font-size: $mob30;
+      padding: 0 1.2em;
+
+      &-list {
+        position: relative;
+        padding: 0.5em 0;
+        &::after {
+          content: "+";
+          position: absolute;
+          right: 0;
+          font-family: none;
+          font-size: $mob30;
+        }
+
+        &.selected::after {
+          content: "-";
+          top: 8px;
+          right: 0px;
+          font-size: 34px;
+          font-family: none;
+        }
+      }
+
+      .services-tab-scope {
+        font-family: "AvenirNextLTCom-Regular";
+        width: 100%;
+        background-color: #ffffff;
+        font-size: $mob16;
+
+        &-container {
+          max-width: 100%;
+          padding-top: 2em;
+        }
+
+        &-desc {
+          line-height: 1.5em;
+        }
+
+        &-econtainer {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &-hire {
+          text-align: center;
+          padding: 2em;
+        }
+
+        &-hireBtnContainer {
+          display: flex;
+          justify-content: space-between;
+          padding: 2em 0;
+        }
+
+        &-hireBtn {
+          padding: 1em 3em;
+          border: none;
+          color: #ffffff;
+          background-color: #5044fc;
+          border-radius: 25px;
+        }
+      }
+    }
+
+    &-tab-scope {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .services {
+    &-indicator {
+      font-size: $highDesk30;
+    }
+
+    &-tab,
+    &-tab-scope,
+    &-tab-menu-list,
+    &-tab-full-desc {
+      font-size: $highDesk16;
+    }
+
+    &-tab-logo-title {
+      .auki-services-title,
+      .auki-services-title.fend {
+        font-size: $highDesk60;
+      }
+    }
+  }
+}

@@ -3,7 +3,8 @@ import HomeLayout from "../template/homepage"
 import GenericInfoCaller from "../components/genericinfo/GenericInfoCaller"
 import WhyAuki from "../components/whyauki/WhyAuki"
 import WeAreAuki from "../components/weareauki/WeAreAuki"
-import CaseSlide from "../components/case-study/caseSlide";
+import CaseSlide from "../components/case-study/caseSlide"
+import ServiceTab from "../components/service-tab/seviceTab"
 import { graphql, useStaticQuery } from "gatsby"
 
 const HomePage = props => {
@@ -45,6 +46,7 @@ const HomePage = props => {
   return (
     <HomeLayout>
       <WeAreAuki />
+      <ServiceTab aemdata={aemdata} ecomdata={ecomdata} fenddata={fenddata}/>
       <GenericInfoCaller />
       <WhyAuki />
       <CaseSlide aemdata={aemdata} ecomdata={ecomdata} fenddata={fenddata}/>
