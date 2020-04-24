@@ -3,7 +3,7 @@ import './CaseSlide.scss'
 import Slide from '../slider/slide';
 // import CaseStudyExpand from './caseStudyExpand.jsx';
 import MediaQuery, { useMediaQuery } from 'react-responsive';
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 // import getData from '../../content/caseStudy.js';
 
 const responsive = [
@@ -40,21 +40,15 @@ const CaseSlide = React.memo((props) => {
     }, [])
 
     const [showCaseStudy, updateShowCaseStudy] = useState(false);
-    const [dataFormated, updateDataFormated] = useState(combine(props.aemdata,props.ecomdata,props.fenddata));
+    const [dataFormated, updateDataFormated] = useState(combine(props.aemdata, props.ecomdata, props.fenddata));
     const [link, updateLink] = useState('');
     const isMob = (useMediaQuery({ maxDeviceWidth: 767 }));
     const type = "case-slide";
 
     const handleLinkClick = useCallback((e, link) => {
         e.preventDefault();
-        console.log(link)
-        if (!isMob) {
-            props.history.push(props.loc.pathname + link);
-        }
-        else {
-            updateLink(link);
-            updateShowCaseStudy(true);
-        }
+        updateLink(link);
+        updateShowCaseStudy(true);
     }, [isMob, props.history]);
 
     const handleClose = useCallback((e) => {
@@ -84,11 +78,14 @@ const CaseSlide = React.memo((props) => {
                                                 <div className={`${type}-container`}>
                                                     <h2 className={`${type}-title`}>{data.frontmatter.title}</h2>
                                                     <p className={`${type}-text`}>{data.frontmatter.shortDesc}</p>
-                                                    {data.link !== '' ?
-                                                        <a onClick={(e) => handleLinkClick(e, link)} className={`${type}-link`} href={link}>
+                                                    {isMob ? <a onClick={(e) => handleLinkClick(e, link)} className={`${type}-link`} href={link}>
+                                                        <span className={`${type}-link-char`}>&#8640;</span>
+                                                        <span>read the case study</span>
+                                                    </a> :
+                                                        <Link className={`${type}-link`} state={{ selected: data.fields.slug }} to={`/case/${data.frontmatter.tag}`}>
                                                             <span className={`${type}-link-char`}>&#8640;</span>
                                                             <span>read the case study</span>
-                                                        </a> : ''
+                                                        </Link>
                                                     }
                                                 </div>
                                                 {/* {data.image !== '' ? <img className={`${type}-img`} src={data.image} alt={data.image} /> : ''} */}
@@ -107,4 +104,4 @@ const CaseSlide = React.memo((props) => {
 });
 
 export default CaseSlide;
-{/* <CaseStudyExpand handleClose={handleClose} link={link} isMob={true} /> */}
+{/* <CaseStudyExpand handleClose={handleClose} link={link} isMob={true} /> */ }

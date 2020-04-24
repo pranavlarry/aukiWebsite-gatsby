@@ -27,6 +27,8 @@ const HomePage = props => {
       }
     }
   `)
+
+
   data = [...data.allMarkdownRemark.edges]
   var aemdata = [],
     ecomdata = [],
