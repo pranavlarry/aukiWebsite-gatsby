@@ -9,11 +9,11 @@ const Input= React.memo((props)=> {
     }
     switch ( props.elementType ) {
         case ( 'input' ):
-            classapplied.push("hello-"+props.type);
+            // classapplied.push("hello-"+props.type);
             inputElement = 
-                <div className="form-inner-container">               
+                <div className={props.type+" form-inner-container"}>               
                     <input
-                    className = {classapplied.join(' ')}
+                    className = "hello-form"
                     {...props.elementConfig}
                     value={props.value}
                     onChange={props.changed} />
@@ -26,7 +26,9 @@ const Input= React.memo((props)=> {
                     dropClick={props.changed}
                     type= {props.type}  
                     heading={props.elementConfig.options.heading}
-                    datas={props.elementConfig.options.data}/>
+                    datas={props.elementConfig.options.data}
+                    multi={props.elementConfig.options.multi ? true : false}
+                    />
             );
             break;
         default:

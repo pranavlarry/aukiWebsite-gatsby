@@ -11,7 +11,6 @@ const WeAreAuki=React.memo(() => {
     const services = ['E-commerce', 'Adobe Experience Cloud', 'Frontend Development', 'APP Development'];
     const tagLine1 = " digital agencies worldwide in";
     const footerText = "Discover our Auki formula";
-    let i = 0;
 
     const discoverAuki = useCallback((e)=> {
         e.preventDefault();

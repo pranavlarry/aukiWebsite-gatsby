@@ -5,9 +5,17 @@
         background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%);
     }
 
-    .service-case.even {
-        color: white;
-    } 
+    .slider-container > .service-case.slider-slide:nth-child(odd) {
+        color: #000000;
+    }
+
+    .slider-container > .service-case.slider-slide:nth-child(even) {
+        color: #ffffff;
+    }
+
+    // .service-case.even {
+    //     color: white;
+    // } 
     .service-case-container{
         font-family: "AvenirNextLTCom-Regular";
         padding: 27% 12% 27% 12%;
@@ -67,6 +75,10 @@
     .service-caseStudy {
         .carousel{
             background:  linear-gradient(90deg, rgba(255,255,255,1) 93%, rgba(0,0,0,1) 93%);
+        }
+
+        .slider-container > .service-case.slider-slide:nth-child(even) {
+            color: #000000;
         }
 
         .service-case-container{

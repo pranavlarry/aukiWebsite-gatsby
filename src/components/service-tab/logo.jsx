@@ -13,11 +13,7 @@ const Logo = React.memo((props)=> {
                     <h1 className={extrastyle.join(' ')}>{data.title}</h1>
                 </div>
                 <div className={select+"-display-none"}>
-                    {data.subtitle !== "" && <h4 className="auki-logo-subtitle">{data.subtitle}</h4>}
-                    <div style={{display :"flex"}}>
-                        {data.subtitleLogo !== '' && <img src={data.subtitleLogo} alt="adobe" width="30px" height="25px"/>} 
-                        {data.subtitleLogoDesc !== '' && <p>{data.subtitleLogoDesc}</p>}
-                    </div>
+                    {data.subHtml}
                 </div>
             </div>
         </div>  

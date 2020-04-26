@@ -1,15 +1,5 @@
 import React, { useState, useCallback } from 'react';
 //on resize color fix
-
-const svgIcon = (<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-width="42.000000pt" height="19.000000pt" viewBox="0 0 42.000000 19.000000"
-preserveAspectRatio="xMidYMid meet">
-<g transform="translate(0.000000,19.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M255 108 c17 -11 6 -14 -85 -19 -101 -5 -100 -5 45 -6 157 -1 159 0
-41 32 -21 6 -21 6 -1 -7z"/>
-</g>
-</svg>);
 const Menu= React.memo((props)=> {
     const [selected,updateSelected] = useState(0);
 

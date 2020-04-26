@@ -95,6 +95,23 @@ class FormTest extends Component {
                 valid: false,
                 value: ""
             },
+            areaOfInterest:{
+                elementType: "select",
+                elementConfig: {
+                    options: {
+                        heading: 'Choose your areas of interest',
+                        data:["Adobe Expirence Cloud","E-Commerce","Frontend development"],
+                        multi: true
+                    }
+                },
+                validation: {
+                    required: true,
+                    onlyNum: true
+                },
+                touched:false,
+                valid: false,
+                value: ""
+            },
             contractorHiring:{
                 elementType: "select",
                 elementConfig: {
@@ -164,7 +181,7 @@ class FormTest extends Component {
         const updateForm = {...this.state.form};
         const updateFormData = {...updateForm[name]};
         let value='';
-        if(name === 'contractorHiring' || name === 'companySize') {
+        if(name === 'contractorHiring' || name === 'companySize' || name==='areaOfInterest') {
             value = $("."+name+"-dropdown .active").text();
         }
         else {

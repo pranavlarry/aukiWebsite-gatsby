@@ -4,7 +4,17 @@ import Slide from '../slider/slide';
 import CaseStudyExpand from './caseStudyExpand.jsx';
 import MediaQuery, { useMediaQuery } from 'react-responsive';
 import { Link } from 'gatsby'
-// import getData from '../../content/caseStudy.js';
+import case1 from '../../assets/images/Case1.png';
+import case2 from '../../assets/images/Case2.png';
+import case3 from '../../assets/images/Case3.png';
+
+const getImg = (tag)=> {
+    switch(tag) {
+        case "aem": return case1;
+        case "ecom": return case2;
+        case "fend": return case3;
+    }
+}
 
 const responsive = [
     {
@@ -45,7 +55,6 @@ const CaseSlide = React.memo((props) => {
     const type = "case-slide";
 
     const handleLinkClick = useCallback((e, link,data) => {
-        console.log(data);
         e.preventDefault();
         updateShowCaseStudy({
             status: true,
@@ -69,11 +78,11 @@ const CaseSlide = React.memo((props) => {
                 responsive.map((slide, index) => {
                     return (
                         <MediaQuery query={slide.query} key={index}>
-                            {/* <Slide data={data} handleLinkClick={handleLinkClick} slidesToShow={slide.slidesToShow} type="case-slide" isMob={slide.isMob}/> */}
+                            {/* <Slide data={data} handleLinkClick={handleLinkClick} slidesToShow={slide.slidesToShow} type="case-slide" isMob={slide.isMob}/> , (index + 1) % 2 === 0 ? 'even' : 'odd' */}
                             <Slide length={dataFormated.length} slidesToShow={slide.slidesToShow} isMob={isMob} type={type}>
                                 {
                                     dataFormated.map(function (data, index) {
-                                        const classValue = [type, "slider-slide", (index + 1) % 2 === 0 ? 'even' : 'odd'];
+                                        const classValue = [type, "slider-slide",index % 2 === 0 ? 'even' : 'odd'];
                                         const link = "case/" + data.fields.slug;
                                         return (
                                             <div key={index} data-index={index} className={classValue.join(' ')}>
@@ -90,7 +99,7 @@ const CaseSlide = React.memo((props) => {
                                                         </Link>
                                                     }
                                                 </div>
-                                                {/* {data.image !== '' ? <img className={`${type}-img`} src={data.image} alt={data.image} /> : ''} */}
+                                                <img className={`${type}-img`} src={getImg(data.frontmatter.tag)} alt={data.image} />
                                             </div>
                                         );
                                     })

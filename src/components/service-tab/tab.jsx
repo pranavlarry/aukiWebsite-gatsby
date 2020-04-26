@@ -31,7 +31,7 @@ const Tabs =React.memo((props)=> {
             return  <li className={`${style} services-indicator-list`} key={index} onClick={handleChange.bind(this,index)}>{elem.props.title === "Commerce Cloud" ? "E-commerce" : elem.props.title} <span>&#x021C0;</span></li>;
         });
     return ( 
-        <div class="services" style={{overflow:"hidden"}}>
+        <div className="services" style={{overflow:"hidden"}}>
             <ul className="services-indicator">
             {li}
             </ul>

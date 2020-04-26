@@ -18,16 +18,16 @@ const Slide = React.memo((props)=> {
     });
 
     const handleCaseStudyEvenOdd = useCallback(() =>{
-        $(".service-case").each(function(){
-            if($(this).hasClass("odd")) {
-                $(this).removeClass("odd");
-                $(this).addClass("even");
-            }
-            else if($(this).hasClass("even")) {
-                $(this).removeClass("even");
-                $(this).addClass("odd");
-            }
-        })
+        // $(".service-case").each(function(){
+        //     if($(this).hasClass("odd")) {
+        //         $(this).removeClass("odd");
+        //         $(this).addClass("even");
+        //     }
+        //     else if($(this).hasClass("even")) {
+        //         $(this).removeClass("even");
+        //         $(this).addClass("odd");
+        //     }
+        // })
     },[]);
     
     const handleClick = useCallback((e) => {
@@ -65,9 +65,6 @@ const Slide = React.memo((props)=> {
         }
     },[props.type,handleCaseStudyEvenOdd])
 
-    // const datas = props.data;
-    // const type = props.type;
-        
         return (
             <div className="slider carousel" ref={slider}>
                 <div className="slider-container" ref={sliderContainer} style={{display: "flex"}}>
@@ -80,25 +77,3 @@ const Slide = React.memo((props)=> {
 });
  
 export default Slide;
-
-
-// {
-//     datas.map(function(data,index){
-//         const classValue=[type,"slider-slide",(index + 1) % 2 === 0 ? 'even' : 'odd' ];
-//         return (
-//             <div key={index} data-index={index} className={classValue.join(' ')}>
-//                 <div className={`${type}-container`}>
-//                     <h2 className={`${type}-title`}>{data.title}</h2>
-//                     <p className={`${type}-text`}>{data.text}</p>
-//                     {data.link !== '' ?
-//                         <a onClick={(e)=> props.handleLinkClick(e,data.link)} className={`${type}-link`} href={data.link}>
-//                             <span className={`${type}-link-char`}>&#8640;</span>
-//                             <span>read the case study</span>
-//                         </a> : ''
-//                     }
-//                 </div>
-//                 {data.image !== '' ? <img className={`${type}-img`} src={data.image} alt={data.imageAlt}/> : ''}
-//             </div>
-//         );
-//     })
-// }

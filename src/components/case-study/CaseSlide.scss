@@ -21,14 +21,16 @@
     .case-slideStudy {
         height: 435px;
     }
-    
-    .case-slide.even {
+
+    .case-slide.slider-slide.odd {
+        background-color: #ebebeb;
+    }
+
+    .case-slide.slider-slide.even {
         background-color: #080a1f;
         color: #ffffff;
     }
-    .case-slide.odd {
-        background-color: #ebebeb;
-    }
+    
     
     .case-slide-container {
         // padding: 35px 50px 10px 50px;

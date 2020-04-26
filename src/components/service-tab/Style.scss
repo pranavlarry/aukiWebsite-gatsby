@@ -356,7 +356,8 @@
 
       &-list {
         position: relative;
-        padding: 0.5em 0;
+        padding: 0.6em;
+        padding-left: 0;
         &::after {
           content: "+";
           position: absolute;
