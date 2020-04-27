@@ -13,7 +13,7 @@ const GenericInfo = props => {
                         <p>{props.subinfo}</p>
                     </div>
                     <div className="genericinfo__content-readmore">
-                        <a href={props.link}>read more</a>
+                        <a href={props.link}>read more<span>&#8640;</span></a>
                     </div>
                 </div>
             </div>

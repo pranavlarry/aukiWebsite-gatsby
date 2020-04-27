@@ -11,12 +11,12 @@ const Navbar = React.memo((props)=> {
     const mobMenuButton = useRef(), navMenu=useRef();
     const stickyElement=useCallback(()=> {
         try {
-            var header = document.querySelector('.weareauki__container');
-            var headerHeight = getComputedStyle(header).height.split('px')[0];
+            // var header = document.querySelector('.weareauki__container');
+            // var headerHeight = getComputedStyle(header).height.split('px')[0];
             var navbar = document.querySelector('.navbar');  
             var scrollValue = window.scrollY;
             
-            if (scrollValue > headerHeight){
+            if (scrollValue > 100){
             //   
               navbar.classList.add('is-fixed');
             //   const timer= setTimeout(()=> {
@@ -25,7 +25,7 @@ const Navbar = React.memo((props)=> {
             //     clearTimeout(timer);
             //   },10)
               
-            } else if (scrollValue < headerHeight || scrollValue===0){
+            } else if (scrollValue < 100 ){
             //   navbar.classList.remove('up');
               navbar.classList.remove('is-fixed');
             //   navbar.removeAttribute("style");

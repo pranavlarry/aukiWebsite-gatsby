@@ -1,16 +1,31 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 // import TextLoop from "react-text-loop";
 import './weareauki.scss';
 import HireT from '../hireteamtalent/HireT';
 import Typist from 'react-typist';
 import TypistLoop from 'react-typist-loop';
 import $ from 'jquery';
+
+const handleSize = ()=> {
+    $(".weareauki__container").css("height",`calc(100vh - ${$(".navbar").height()}px)`)
+
+}
 const WeAreAuki=React.memo(() => {
     const headLine = "We are AUKI";
     const tagLine0 = "a team of coders and doers, working with";
     const services = ['E-commerce', 'Adobe Experience Cloud', 'Frontend Development', 'APP Development'];
     const tagLine1 = " digital agencies worldwide in";
     const footerText = "Discover our Auki formula";
+
+    useEffect(()=> {
+        handleSize();
+        $(window).on("resize.banner",()=>{
+            handleSize();
+        });
+        return (()=>{
+            $(window).off("resize.banner");
+        })
+    },[])
 
     const discoverAuki = useCallback((e)=> {
         e.preventDefault();
@@ -19,6 +34,7 @@ const WeAreAuki=React.memo(() => {
     },[]);
 
     return (
+        <div>
         <div className="weareauki__container">
             <div className="weareauki__content-wrapper">
                 <div className="weareauki__content">
@@ -52,6 +68,7 @@ const WeAreAuki=React.memo(() => {
                     </svg>
                 </a>
             </div>
+        </div>
         </div>
     );
 });

@@ -75,14 +75,16 @@
     }
 }
 
-@media (min-width: 823px) and (max-width: 1920px) {
-    .hello-desc {
-        font-size: $desk30;
-        width: (610vw/13.66);
-    }
-}
+// @media (min-width: 823px) and (max-width: 1920px) {
+//     .hello-desc {
+//         font-size: $desk60;
+//         width: (610vw/13.66);
+//     }
+// }
 
 @media (max-width: 950px) {
+
+    
     .hello-container{
         padding: 20px 15px;
     }

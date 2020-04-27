@@ -1,0 +1,19 @@
+.breadcrumb {
+    margin: 2em 0;
+    margin-left: 35px;
+    padding: 0 50px;
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 767px) {
+    .breadcrumb {
+        display: none;
+    }
+}

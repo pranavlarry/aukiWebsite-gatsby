@@ -1,64 +1,79 @@
-@import '../../font-size/font-size.scss';
+@import "../../font-size/font-size.scss";
 
 .form-outter-container {
-    padding: 2em 1em;
-    font-size: $desk16;
-    input {
-        padding: .4em 0;
-    }
-    form {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-column-gap: 1em;
-        grid-row-gap: 3em;
-    }
+  padding: 2em 1em;
+  font-size: $desk16;
+  input {
+    padding: 0.4em 0;
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 3em;
+  }
 
-    div,.hello-form  {
-        display: inline-block;
-        width: 100%;
-    }
+  div,
+  .hello-form {
+    display: inline-block;
+    width: 100%;
+  }
 
-    .hello-form {
-        border: none;
-        border-bottom: 1px solid black;
-        font-family: "AvenirNextLTCom-Regular";
-        font-size: inherit;
-        outline: none;
-    }
+  .hello-form {
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: "AvenirNextLTCom-Regular";
+    font-size: inherit;
+    outline: none;
+  }
 
-    .skillAndExpirence {
-        grid-column: 1/3;
-    }
+  .skillAndExpirence {
+    grid-column: 1/3;
+  }
 
-    .hello-form-submit {
-        background-color: #5044fc;
-        cursor: pointer;
-        padding: 1em 2em;
-        font-size: inherit;
-        color: white;
-        border: none;
-        width: 60%;
-    }
+  .hello-form-submit {
+    background-color: #5044fc;
+    cursor: pointer;
+    padding: 1em 2em;
+    font-size: inherit;
+    color: white;
+    border: none;
+    width: 60%;
+  }
 }
 @media (min-width: 1920px) {
-    .form-outter-container {
-        font-size: $highDesk16;
-    }
-    
+  .form-outter-container {
+    font-size: $highDesk16;
+  }
 }
 
-@media (max-width: 1365px) and (min-width: 767px) {
-    .form-outter-container {
-        font-size: $lowDesk16;
+@media (max-width: 1365px) and (min-width: 768px) {
+  .form-outter-container {
+    font-size: $lowDesk16;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-outter-container {
+    font-size: $mob16;
+
+    form {
+      grid-row-gap: 2em;
     }
-    
+  }
 }
 
 @media (max-width: 950px) {
-    .form-inner-container,.companySize-dropdown,.areaOfInterest-dropdown,.contractorHiring-dropdown {
-        grid-column: 1/3;
-    }
+  .form-inner-container,
+  .companySize-dropdown,
+  .areaOfInterest-dropdown,
+  .contractorHiring-dropdown,
+  .hello-form-submit {
+    grid-column: 1/3;
+  }
+
+  .hello-form-submit {
+      justify-self: center;
+      width: 25%;
+  }
 }
-
-
-

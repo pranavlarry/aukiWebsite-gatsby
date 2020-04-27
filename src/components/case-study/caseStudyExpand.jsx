@@ -3,15 +3,16 @@ import './CaseStudyExpand.scss';
 import Slide from '../slider/slide';
 import aemLogo from '../../assets/images/2152874.png';
 import adobeLogo from '../../assets/images/adobe.png';
+import Breadcrumb from '../breadcrumb/breadcrumb';
 
 const getSubHtml = (tag) => {
     switch (tag) {
         case "aem":
             return (
                 <React.Fragment>
-                    <div style={{display:"flex"}}>
+                    <div style={{ display: "flex" }}>
                         <img width="70px" src={aemLogo} alt="aem" />
-                        <h4 style={{margin:0,padding:"10px",width:"100px"}}>Adobe Expirence Manager</h4>
+                        <h4 style={{ margin: 0, padding: "10px", width: "100px" }}>Adobe Expirence Manager</h4>
                     </div>
                     <h4 style={{ color: "rgb(211,111,26)" }}>BRONZE PARTNER</h4>
                     <div style={{ display: "flex" }}>
@@ -29,7 +30,7 @@ const getSubHtml = (tag) => {
         case "fend":
             return (
                 <React.Fragment>
-                    
+
                 </React.Fragment>
             )
     }
@@ -37,7 +38,7 @@ const getSubHtml = (tag) => {
 
 const CaseStudyExpand = React.memo((props) => {
 
-  
+
 
     const getTemplate = useCallback((caseData, index) => {
         const data = caseData.node.frontmatter;
@@ -45,10 +46,11 @@ const CaseStudyExpand = React.memo((props) => {
             <div className="caseExpand slider-slide" key={index} >
                 <a href="#" className="caseExpand-close" onClick={(e) => props.handleClose(e)}><b>x[Close]</b></a>
                 <div className="caseExpand-Ctitle" >
+                    <Breadcrumb links={window.location.pathname.split("/")} />
                     <h2 className="caseExpand-Ctitle-title">{data.desc}</h2>
-                     <div className="caseExpand-Ctitle-subtitle">
-                        {getSubHtml(props.formateData[0].node.frontmatter.tag)}
-                    </div> 
+                    <div className="caseExpand-Ctitle-subtitle">
+                        {getSubHtml(data.tag)}
+                    </div>
                 </div>
                 <div className="caseExpand-Cdesc">
                     <ul className="caseExpand-Cdesc-list">
