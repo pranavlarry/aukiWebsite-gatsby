@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import $ from 'jquery';
 //on resize color fix
 const Menu= React.memo((props)=> {
     const [selected,updateSelected] = useState(0);
@@ -14,6 +15,8 @@ const Menu= React.memo((props)=> {
         }
         else {
             //scroll to say hello here
+            const val = $('.hello-main-container').offset().top - 100;
+            $('html,body').animate({scrollTop: val+'px'},800);
         }
 
     },[props]);

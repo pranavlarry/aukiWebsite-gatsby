@@ -3,16 +3,17 @@ import './footer.scss';
 import { useCallback } from 'react';
 import $ from 'jquery';
 
-const Footer = React.memo(()=> {
-    const year =  new Date().getFullYear();
-    const goUp = useCallback((e)=> {
+const Footer = React.memo(() => {
+    const year = new Date().getFullYear();
+    const goUp = useCallback((e) => {
         e.preventDefault();
-        $("body,html").animate({scrollTop:"0px"},800);
+        $("body,html").animate({ scrollTop: "0px" }, 800);
     });
     return (
         <footer className="footer">
-            <a href="#" onClick={goUp} className="footer-up">
-                <svg version="1.1" className="footer-up-img" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" >
+            <div className="footer-up">
+                <a href="#" onClick={goUp} >
+                    <svg version="1.1" className="footer-up-img" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" >
                         <g>
                             <g>
                                 <path d="M506.157,132.386c-7.803-7.819-20.465-7.831-28.285-0.029l-207.73,207.299c-7.799,7.798-20.486,7.797-28.299-0.015
@@ -21,8 +22,9 @@ const Footer = React.memo(()=> {
                                 C513.946,152.868,513.959,140.205,506.157,132.386z" />
                             </g>
                         </g>
-                </svg>
-            </a>
+                    </svg>
+                </a>
+            </div>
             <p className="footer-desc">&copy; {year} <b>AUKI</b> - All rights reserved.</p>
         </footer>
 

@@ -3,6 +3,7 @@
 .hello-title {
     font-family: "AvenirNextLTCom-Demi";
     text-align: center;
+    font-size: $desk60;
 }
 
 .hello-main-container {
@@ -68,19 +69,6 @@
         font-size: 85px
     }
 }
-
-@media(min-width:1366px) {
-    .hello-title{
-        font-size: $desk60;
-    }
-}
-
-// @media (min-width: 823px) and (max-width: 1920px) {
-//     .hello-desc {
-//         font-size: $desk60;
-//         width: (610vw/13.66);
-//     }
-// }
 
 @media (max-width: 950px) {
 

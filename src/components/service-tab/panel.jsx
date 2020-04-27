@@ -7,6 +7,7 @@ import Arrow from './arrow.jsx';
 
 const Panel= React.memo((props)=> {
     const getData = useCallback(()=> {
+        console.log(props.menuSelected)
         if(props.menuSelected === "Scope of work") {
             return props.data[props.tabSelected].scopes;
         }
@@ -18,9 +19,6 @@ const Panel= React.memo((props)=> {
         }
         else if(props.menuSelected === "Full Tech Implementation") {
             return props.data[props.tabSelected].fullTech;
-        }
-        else if(props.menuSelected === "hello") {
-
         }
 
     },[props]);

@@ -9,9 +9,6 @@ import { Link } from 'gatsby'
 
 const DisplaySec = React.memo((props) => {
 
-    const handleLinkClick = (e, link) => {
-
-    }
 
     if (props.selected === "Case study") {
         let selected;
@@ -24,7 +21,6 @@ const DisplaySec = React.memo((props) => {
                 break;
 
         }
-        console.log(selected)
 
         const responsive = [
             {

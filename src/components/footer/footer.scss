@@ -6,6 +6,7 @@
 
     &-up {
         line-height: 3;
+        display: inline-block;
         &-img{
             transform: rotate(180deg);
             width: 20px;
