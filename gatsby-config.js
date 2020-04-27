@@ -15,6 +15,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-plugin-remove-generator',
+      options: {
+        // Only remove the Gatsby version number instead of the whole node
+        removeVersionOnly: false,
+        // Customise the generator string altogether.
+        // Note: This has the highest precedence of the available options.
+        //content: 'Custom string'
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
