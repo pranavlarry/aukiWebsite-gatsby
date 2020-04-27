@@ -82,6 +82,12 @@
     }
 }
 
+.coffee {
+    font-size: $desk30;
+    text-align: center;
+    font-weight: 100;
+}
+
 @media (min-width: 1920px) {
     .caseExpand {
         &-Ctitle-title,&-Cdesc-heading {
@@ -90,6 +96,10 @@
         &-Cdesc {
             font-size: $highDesk16;
         }
+    }
+
+    .coffee {
+        font-size: $highDesk30;
     }
     
 }
@@ -111,6 +121,9 @@
             background-position: right 60%;
             background-size: 36%;
         }
+    }
+    .coffee {
+        font-size: $lowDesk30;
     }
 }
 @media (max-width: 1365px) {

@@ -41,7 +41,7 @@ const AemCase = props => {
   }
 
   return (
-    <HomeLayout>
+    <HomeLayout case={true}>
       <CaseStudyExpand formateData={data} isMob={false} />
     </HomeLayout>
   )

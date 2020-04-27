@@ -40,7 +40,7 @@ const EcomCase = props => {
     data = [select[0], ...data]
   }
   return (
-    <HomeLayout>
+    <HomeLayout case={true}>
       <CaseStudyExpand formateData={data} isMob={false} />
     </HomeLayout>
   )

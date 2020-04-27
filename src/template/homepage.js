@@ -9,7 +9,7 @@ const HomeLayout = props => {
     <React.Fragment>
       <Navbar />
       <div>{props.children}</div>
-      <SayHello />
+      <SayHello case={props.case}/>
       <Footer />
     </React.Fragment>
   )
