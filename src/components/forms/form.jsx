@@ -144,13 +144,16 @@ class FormTest extends Component {
                 value: ""
             }
         },
-        formIsValid: false
+        formIsValid: false,
+        invalidSubmit: false,
     }
     isVaild=(value,rules)=>{
         let valid = true;
         let regx;
         if(rules.required) {
-            valid = value.trim() !== '' && valid;
+            if(typeof(value)!== "number") {
+                valid = value.trim() !== '' && valid;
+            }
         }
         if(rules.minLength) {
             valid = value.length >= rules.minLength && valid;
@@ -182,7 +185,7 @@ class FormTest extends Component {
         const updateFormData = {...updateForm[name]};
         let value='';
         if(name === 'contractorHiring' || name === 'companySize' || name==='areaOfInterest') {
-            value = $("."+name+"-dropdown .active").text();
+            value = $("."+name+"-dropdown span").data("value");
         }
         else {
             value = e.target.value;
@@ -206,6 +209,7 @@ class FormTest extends Component {
         e.preventDefault();
         const self=this;
         if(self.state.formIsValid) {
+            this.setState({invalidSubmit:false});
             const formData = {};
             for (let id in self.state.form) {
                 formData[id] = self.state.form[id].value;
@@ -218,6 +222,9 @@ class FormTest extends Component {
                 }
             );
             self.props.onSubmitForm("loading")
+        }
+        else {
+            this.setState({invalidSubmit:true});
         }
 
         
@@ -260,6 +267,7 @@ class FormTest extends Component {
                         })
                     }
                     <button type="submit" onClick={this.handleSubmit} className="hello-form-submit">SUBMIT</button>
+                    {(!this.state.formIsValid && this.state.invalidSubmit) && <p style={{color:"red"}}>Please enter valid data's</p>}
                 </form>
             </div>
          );

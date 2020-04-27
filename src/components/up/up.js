@@ -6,7 +6,6 @@ const Up = props => {
 
     useEffect(()=>{
         $(window).on("scroll.up",()=>{
-            console.log("hii")
             if(window.scrollY > 200) {
                 $(".up").css("display","block");
             }
@@ -14,6 +13,10 @@ const Up = props => {
                 $(".up").css("display","none");
 
             }
+        })
+
+        return (()=> {
+          $(window).off("scroll.up");
         })
     },[])
   const goUp = useCallback(e => {

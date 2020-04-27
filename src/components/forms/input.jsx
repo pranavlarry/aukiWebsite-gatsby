@@ -13,7 +13,7 @@ const Input= React.memo((props)=> {
             inputElement = 
                 <div className={props.type+" form-inner-container"}>               
                     <input
-                    className = "hello-form"
+                    className = {classapplied.join(" ")}
                     {...props.elementConfig}
                     value={props.value}
                     onChange={props.changed} />

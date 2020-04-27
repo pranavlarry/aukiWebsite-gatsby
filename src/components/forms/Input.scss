@@ -3,6 +3,14 @@
 .form-outter-container {
   padding: 2em 1em;
   font-size: $desk16;
+
+  .Invalid {
+    border-bottom:1px solid red!important;
+  }
+
+  .Invalid:focus {
+    border-bottom:1px solid black!important;
+  }
   input {
     padding: 0.4em 0;
   }
