@@ -6,6 +6,7 @@ import WeAreAuki from "../components/weareauki/WeAreAuki"
 import CaseSlide from "../components/case-study/caseSlide"
 import ServiceTab from "../components/service-tab/seviceTab"
 import { graphql, useStaticQuery } from "gatsby"
+import SEO from '../components/SEO'
 
 const HomePage = props => {
   let data = useStaticQuery(graphql`
@@ -45,6 +46,7 @@ const HomePage = props => {
   })
   return (
     <HomeLayout>
+      <SEO />
       <WeAreAuki />
       <ServiceTab aemdata={aemdata} ecomdata={ecomdata} fenddata={fenddata}/>
       <GenericInfoCaller />
