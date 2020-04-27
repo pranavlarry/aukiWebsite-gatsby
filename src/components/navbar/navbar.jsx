@@ -43,7 +43,11 @@ const Navbar = React.memo((props)=> {
         window.addEventListener('scroll', stickyElement);
     },[stickyElement]);
 
-    
+    const goToService = useCallback((e)=>{
+        e.preventDefault();
+        const val = $('.services-indicator').offset().top - 200;
+        $('html,body').animate({scrollTop: val+'px'},800);
+    },[])    
 
     const menuBtnClick = useCallback(()=> {
         $(mobMenuButton.current).toggleClass("open");
@@ -61,7 +65,7 @@ const Navbar = React.memo((props)=> {
                 <div className="navbar-menu" ref={navMenu}>
                     <ul className="navbar-list">
                         <li><Link activeClassName="active" to="/">Home</Link></li>
-                        <li><Link activeClassName="active" to="/about">service</Link> </li>
+                        <li><a href="#" onClick={goToService}>service</a> </li>
                         <li><Link activeClassName="active" to="/about-us">about us</Link></li>
                         <li><Link activeClassName="active" to="/partner-prg">partner program</Link></li>
                     </ul>
